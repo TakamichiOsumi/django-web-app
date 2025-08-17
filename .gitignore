@@ -10,6 +10,8 @@ __pycache__/
 
 /static/*
 
+/photos/*
+
 /pages/migrations
 
 db.sqlite3
