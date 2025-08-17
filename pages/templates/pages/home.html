@@ -11,6 +11,9 @@
 {% if team %}
 {% for member in team %}
 <p>"{{ member.first_name }}" registered at {{ member.created_at }}</p>
+<a>
+  <img src="{{ member.photo.url }}" width="50" height="50">
+</a>
 {% endfor %}
 {% endif %}
 
