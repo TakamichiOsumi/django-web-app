@@ -11,13 +11,15 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 (venv) $ pip install -r requirements.txt
 (venv) $ emacs .env
+(venv) $ brew services start postgresql
+(venv) $ bash pg_setup.sh
+(venv) $ python manage.py makemigrations
+(venv) $ python manage.py migrate
 (venv) $ python manage.py collectstatic
 (venv) $ python manage.py runserver
 ```
 
-### Write .env and prepare database
-
-The .env requires below environment variables.
+### Environment variables required to be defined in .env
 
 * SECRET_KEY
 * DEBUG
@@ -29,8 +31,3 @@ The .env requires below environment variables.
 * DB_HOST
 * DB_PORT
 * TESTING_DB_NAME
-
-Then, execute the below command.
-```
-$ bash pg_setup.sh
-```
