@@ -21,13 +21,7 @@ $ source venv/bin/activate
 
 ### Environment variables required to be defined in .env
 
-* SECRET_KEY
-* DEBUG
-* ALLOWED_HOSTS
-* ADMIN_PATH
-* DB_NAME
-* DB_USER
-* DB_PASSWORD
-* DB_HOST
-* DB_PORT
-* TESTING_DB_NAME
+For django basic settings, define SECRET_KEY, DEBUG, ALLOWED_HOSTS and ADMIN_PATH.
+
+To enable the database access, define DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
+and TESTING_DB_NAME.
