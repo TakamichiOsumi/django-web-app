@@ -33,6 +33,7 @@ ALLOWED_HOSTS: list[str] = os.getenv('ALLOWED_HOSTS').split(',')
 # Application definition
 
 INSTALLED_APPS = [
+    'products.apps.ProductsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
