@@ -1,6 +1,16 @@
 from django.shortcuts import render
-from . import views
+from django.views import generic
+from .models import Product
 
 # Create your views here.
-def products(request):
-    return render(request, 'products/products.html')
+class Products(generic.TemplateView):
+    model = Product
+    template_name = 'products/products.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.products = Product.objects.all()
+        context['products'] = self.products
+        return context
+
+products = Products.as_view()
