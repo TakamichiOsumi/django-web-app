@@ -9,8 +9,10 @@ class Product(models.Model):
     products_id = models.AutoField(primary_key = True)
     name = models.CharField(max_length = 255)
     top_photo = models.ImageField(upload_to = 'products/%Y/%m/%d/')
-    extra_photo1 = models.ImageField(upload_to = 'products/%Y/%m/%d/', null = True)
-    extra_photo2 = models.ImageField(upload_to = 'products/%Y/%m/%d/', null = True)
+    extra_photo1 = models.ImageField(upload_to = 'products/%Y/%m/%d/',
+                                     null = True, blank = True)
+    extra_photo2 = models.ImageField(upload_to = 'products/%Y/%m/%d/',
+                                     null = True, blank = True)
     created_at = models.DateTimeField(auto_now_add = True)
     price = models.PositiveIntegerField()
     company = models.CharField(max_length = 100)
