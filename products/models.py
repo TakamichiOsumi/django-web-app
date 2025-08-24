@@ -15,6 +15,7 @@ class Product(models.Model):
                                      null = True, blank = True)
     created_at = models.DateTimeField(auto_now_add = True)
     price = models.PositiveIntegerField()
+    is_featured = models.BooleanField(default = False)
     company = models.CharField(max_length = 100)
     description = models.CharField(max_length = 1000)
 
